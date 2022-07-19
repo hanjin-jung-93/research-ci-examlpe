@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Runs the Super-Linter action
       - name: Lint Code Base
@@ -27,4 +27,4 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_BLACK: true
-          # VALIDATE_PYTHON_FLAKE8: true
+          VALIDATE_PYTHON_FLAKE8: true
