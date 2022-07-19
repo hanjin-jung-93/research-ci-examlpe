@@ -29,8 +29,9 @@ jobs:
           coverage run --source=./ -m unittest discover -p "*_test.py"
           coverage xml
       
-      - name: Upload coverage to code climate
-        env:
-          CODECLIMATE_REPO_TOKEN: 0a9f2aff989cdc1448f539b71142ed85cef51cfa03ced3df602a15065098b145
-        run: |
-          codeclimate-test-reporter
+      # 2022.07.19 deprecated 
+      # - name: Upload coverage to code climate
+      #   env:
+      #     CODECLIMATE_REPO_TOKEN: 0a9f2aff989cdc1448f539b71142ed85cef51cfa03ced3df602a15065098b145
+      #   run: |
+      #     codeclimate-test-reporter
