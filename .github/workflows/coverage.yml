@@ -28,7 +28,13 @@ jobs:
         run: |
           coverage run --source=./ -m unittest discover -p "*_test.py"
           coverage xml
-      
+      - name: publish code coverage to code-climate (duh)
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: 0a9f2aff989cdc1448f539b71142ed85cef51cfa03ced3df602a15065098b145
+        with:
+          debug: true
+        if: ${{ github.event_name == 'push' }}
       #  2022.07.19 deprecated 
       # - name: Upload coverage to code climate
       #   env:
