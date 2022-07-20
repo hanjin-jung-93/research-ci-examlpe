@@ -5,5 +5,4 @@ def helloworld(a):
 
 
 if __name__ == "__main__":
-    
     helloworld("test")
